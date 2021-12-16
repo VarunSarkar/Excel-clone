@@ -1,0 +1,283 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+/************************************** page option bar ***************************************/
+.page-actions-cont{
+ height: 3rem;
+ background-color: #218c74;
+ align-items: flex-end;
+ display: flex;
+}
+
+.page-action{
+    color: #f1f2f6;
+    min-width: 4rem;
+    text-align: center;
+    height: 2rem;
+    padding-top: 0.4rem;
+    cursor: pointer;
+}
+
+.tabSel{
+    background-color: #ecf0f1;
+    color: #218c74;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/******************************************* cells properties container *****************************************/
+.cellprops-actions-cont, .pageprops-actions-cont, .insertprops-actions-cont, .Layoutprops-actions-cont, .helpprops-actions-cont{
+    height: 3rem;
+    background-color: #ecf0f1;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none; /*for firefox -> to  hide scroll bar*/
+   -ms-overflow-style: none; /*for IE and Edge -> to  hide scroll bar*/
+}
+
+.cellprops-actions-cont::-webkit-scrollbar {
+    display: none; /*for google chrome -> to hide scroll bar*/
+}
+
+.formatting_cont{
+    border-right: 1.4px solid lightgray;
+    height: 80%;
+    padding-left: 1rem;
+    align-items: center;
+    display: flex;   
+}
+
+.formatting_cont>*{
+    margin-right: 1rem;
+    display: flex;
+}
+
+.cellprops-actions-cont select{
+    border: none;
+    outline: none;
+    padding: 0.2rem;
+    border-radius: 2px;
+    background-color: #ecf0f1;
+}
+
+.formatting_cont>span{
+    height: 80%;
+    width: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: rgb(107, 107, 107);
+}
+
+.formatting_cont>span:hover, .active{
+    background-color: #d0d3d4;
+    cursor: pointer;
+}
+
+.color-prop{
+    position: relative;
+}
+
+.color-prop>input{
+    position: absolute;
+    height: 80%;
+    width: 2.2rem;
+    opacity: 0;
+}
+
+.color-prop>input:hover + span{
+    background-color: #d0d3d4;
+    cursor: pointer;
+}
+
+.BGcolor{
+    top: 0.2rem;
+    left: 4rem;
+}
+
+.end{
+    border-right: none;
+}
+/************************************************ formula container *********************************************/
+.formula-actions-cont{
+    height: 2rem;
+    background-color:rgb(230, 228, 228);
+    padding-left: 1rem;
+    display: flex;
+    align-items: center; 
+    border-top: 0.1px solid lightgray; 
+}
+
+.formula-actions-cont>*{
+    margin-right: 1rem;
+    outline: none;
+    display: inline-block;
+    border: none;
+    height: 70%;
+}
+
+.address_bar{
+    width: 5rem;
+    text-align: center;
+}
+
+.formula-icon{
+    width: 1.7rem;
+    height: 50%;
+    border-left: 1px solid lightgray;
+    padding-left: 0.5rem;
+}
+
+.formula_bar{
+    width: calc(100vw - 5rem - 1.7rem - 2rem);
+}
+
+
+/******************************************************** grid container *****************************************************/
+.grid-cont{
+    height: calc(100vh - 3rem - 3rem - 2rem - 3rem);
+    background-color: rgb(248, 245, 245);
+    position: relative;
+    overflow: scroll;
+}
+
+.top-left-dummybox{
+    height: 1.4rem;
+    width: 1.8rem;
+    background-color: rgb(97, 96, 96);
+    position: fixed;
+    z-index: 2;
+}
+
+.address-top-row{
+    display: flex;
+    position: sticky;
+    top: 0px;
+    left: 1.8rem;
+    z-index: 1;
+}
+
+.colCell{
+    background-color:rgb(230, 228, 228);
+    height: 1.4rem;
+    width: 5rem;
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(97, 97, 97);
+    border-top: none;
+}
+
+.colCell:hover, .index_cell:hover{
+    background-color: rgba(52, 150, 52, 0.493);
+}
+
+.address-left-col{
+    width: 1.8rem;
+    background-color:rgb(230, 228, 228);
+    position: sticky;
+    top:1.4rem;
+    left:0;
+    z-index: 1;
+}
+
+.index_cell{
+    height: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    color: rgb(97, 97, 97);
+}
+
+.select{
+    background-color: #d3d7da;
+    color: #218c74;
+}
+
+.select:hover{
+    background-color: #f1f2f6;
+}
+
+.grid{
+    position: absolute;
+    left: 1.8rem;
+    top: 0rem;
+}
+
+.row{
+    display: flex;
+}
+
+.cell{
+    height: 1.4rem;
+    width: 5rem;
+    border: 1px solid lightgray;
+    justify-content: center;
+    outline: none;
+    cursor: cell;
+    overflow: hidden;
+    font-family: 'Arial';
+    font-size: 12px;
+}
+
+/********************************************** sheet add container ********************************************************/
+.sheet-actions-cont {
+    color: rgb(107, 107, 107);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 1rem;
+    background-color: #ecf0f1;
+}
+.sheet-actions-cont > * {
+    display: inline-block;
+}
+.sheet-add-icon {
+    width: 2vw;
+}
+.sheet-add-icon:hover {
+    cursor: default;
+}
+
+.sheets-folder-cont {
+    display: flex;
+    align-items: center;
+    height: 80%;
+    width: 5rem;
+    width: calc( 100vw - 2vw );
+    overflow: auto;
+}
+.sheet-folder {
+    height: 80%;
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+    /* background-color: lightblue; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.sheet-content {
+    width: 5rem;
+    /* background-color: lightgreen; */
+}
+
+.inactive{
+    display: none;
+}

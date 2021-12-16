@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined"
+      rel="stylesheet">
+</head>
+<body>
+
+    <!-- -------------------------------Page action container--------------------------------- -->
+
+    <div class="page-actions-cont">
+        <div class="page-action">File</div>
+        <div class="page-action home">Home</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
+    </div>
+
+
+    <!-- -------------------------------page prop container--------------------------------- -->
+
+    <div class="pageprops-actions-cont inactive File">
+        <div class="formatting_cont">
+            <span class="material-icons-outlined open">
+                file_open 
+            </span>
+            <span class="material-icons-outlined save">
+                save_as
+            </span>
+        </div>
+    </div>
+
+    <!-- -------------------------------cell prop container--------------------------------- -->
+
+    <div class="cellprops-actions-cont Home">
+        <div class="formatting_cont CCP-prop">
+            <span class="material-icons cut">
+                content_cut
+            </span>
+            <span class="material-icons copy">
+                content_copy
+            </span>
+            <span class="material-icons paste">
+                content_paste
+            </span>
+        </div>
+        <div class="formatting_cont font-family-prop">
+            <select class="font-family_selector">
+                <option value="arial">Arial</option>
+                <option value="lucida">Lucida</option>
+                <option value="georgia">Georgia</option>
+                <option value="times new roman">Times Roman</option>
+                <option value="monospace">monospace</option>
+            </select>
+            <select class="font-size_selector">
+                <option value="10">10</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        
+        <div class="formatting_cont text-format-prop">
+            <span class="material-icons bold">
+                format_bold
+            </span>
+            <span class="material-icons italic">
+                format_italic
+            </span>
+            <span class="material-icons underlined">
+                format_underlined
+            </span>
+        </div>
+        <div class="formatting_cont align-prop">
+            <span class="material-icons alignment left">
+                format_align_left
+            </span>
+            <span class="material-icons alignment center">
+                format_align_center
+            </span>
+            <span class="material-icons alignment justify">
+                format_align_justify
+            </span>
+            <span class="material-icons alignment right">
+                format_align_right
+            </span>
+        </div>
+        <div class="formatting_cont end color-prop">
+            <input type="color" class="font_color">
+            <span class="material-icons-outlined">
+                format_color_text
+            </span>
+            <input type="color" class="BGcolor">
+            <span class="material-icons-outlined">
+                format_color_fill
+            </span>
+        </div>
+    </div>
+
+    <!-- -------------------------------insert container--------------------------------- -->
+
+    <div class="insertprops-actions-cont inactive Insert">
+        <div class="formatting_cont">
+
+        </div>
+        <div class="formatting_cont end">
+
+        </div>
+    </div>
+
+    <!-- -------------------------------insert container--------------------------------- -->
+
+    <div class="Layoutprops-actions-cont inactive Layout">
+        <div class="formatting_cont">
+
+        </div>
+        <div class="formatting_cont end">
+
+        </div>
+    </div>
+    
+    <!-- -------------------------------insert container--------------------------------- -->
+
+    <div class="helpprops-actions-cont inactive Help">
+        <div class="formatting_cont">
+
+        </div>
+        <div class="formatting_cont end">
+
+        </div>
+    </div>
+    
+    <!-- -------------------------------formula container--------------------------------- -->
+
+    <div class="formula-actions-cont">
+        <input type="text" class="address_bar">
+        <img class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png" />
+        <input type="text" class="formula_bar">
+    </div>
+
+    <!-- -------------------------------grid container--------------------------------- -->
+
+    <div class="grid-cont">
+        <div class="top-left-dummybox"></div>
+        <div class="address-left-col"></div>
+        <div class="grid">
+            <div class="address-top-row"></div>
+        </div>
+    </div>
+
+    <!-- -------------------------------sheet action container--------------------------------- -->
+
+    <div class="sheet-actions-cont">
+        <div class="sheet-add-icon">
+            <span class="material-icons">
+                post_add
+            </span>
+        </div>
+        <div class="sheets-folder-cont">
+        </div>
+    </div>
+
+    <!-- -------------------------------scripts--------------------------------- -->
+    <script src="grid.js"></script>
+    <script src="tabsAndBtns.js"></script>
+    <script src="cyclevalidation.js"></script>
+    <script src="./colorTrackingForCyclePathTrace.js"></script>
+    <script src="./sheetHandling.js"></script>
+    <script src="./formattingCells.js"></script>
+    <script src="./formulaImplementation.js"></script>
+    <script src="./cutCopyPaste.js"></script>
+    <script src="./openSave.js"></script>
+
+    
+    
+</body>
+</html>
