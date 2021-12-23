@@ -5,21 +5,8 @@ document.addEventListener("keyup", (e) => {
     ctrlKey = e.ctrlKey;
 })
 
-defaultCellProp = {
-    bold: false,
-    italic: false,
-    underlined: false,
-    alignment: "left",
-    fontStyle: "arial",
-    fontSize: "14",
-    fontColor: "#000000",
-    BGColor: "#rgb(248, 245, 245)",
-    value: "",
-    formula: "",
-    children: []
-}
 
-for (let i =0;i < rows;i++) {
+for (let i = 0;i < rows;i++) {
     for (let j = 0;j < cols;j++) {
         let cell = document.querySelector(`.cell[rowID="${i + 1}"][colID="${String.fromCharCode(j + 65)}"]`);
         handleSelectedCells(cell);
@@ -103,7 +90,15 @@ cutBtn.addEventListener("click", (e) => {
             let cutData = structuredClone(cellProp);
             copyRow.push(cutData);
 
-            cellProp = defaultCellProp;
+            cellProp.value = data.value;
+            cellProp.bold = data.bold;
+            cellProp.italic = data.italic;
+            cellProp.underlined = data.underline;
+            cellProp.fontSize = data.fontSize;
+            cellProp.fontFamily = data.fontFamily;
+            cellProp.fontColor = data.fontColor;
+            cellProp.BGcolor = data.BGcolor;
+            cellProp.alignment = data.alignment;
 
             // UI
             cell.click();
