@@ -90,15 +90,15 @@ cutBtn.addEventListener("click", (e) => {
             let cutData = structuredClone(cellProp);
             copyRow.push(cutData);
 
-            cellProp.value = data.value;
-            cellProp.bold = data.bold;
-            cellProp.italic = data.italic;
-            cellProp.underlined = data.underline;
-            cellProp.fontSize = data.fontSize;
-            cellProp.fontFamily = data.fontFamily;
-            cellProp.fontColor = data.fontColor;
-            cellProp.BGcolor = data.BGcolor;
-            cellProp.alignment = data.alignment;
+            cellProp.value = "";
+            cellProp.bold = false;
+            cellProp.italic = false;
+            cellProp.underlined = false;
+            cellProp.fontSize = 14;
+            cellProp.fontFamily = "monospace";
+            cellProp.fontColor = "#000000";
+            cellProp.BGcolor = "#f8f5f5";
+            cellProp.alignment = "left";
 
             // UI
             cell.click();
